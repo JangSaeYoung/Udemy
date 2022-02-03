@@ -18,13 +18,16 @@ ReactDOM.render(
 //   - public/index.html => 하나의 HTML 파일만이 브라우저에 전달
 //   - 싱글HTML파일 -> 리엑트 싱글 페이지 앱/ 스크린에서 뭘 보게 될지 업데이트 하는 것. 
 //   - public/index.html
+
 // 2. <APP /> => 우리가 Import한 것. 
 //   - JS파일 중의 하나라면 .js 삭제해야 한다. 
 //   - ex) import App from './App';
+
 // 3. 앱도 결국 컴포넌트다.
 //   - <APP /> 컴포넌트에 root라는 id가 있다. 
 //   - ( <App />, document.getElementById('root'));
-//   - import 와 export defalt 사용
+//   - import 와 export defalㄹt 사용
+
 // 4. JSX 
 //   - 자바스크립트 내에 있는 HTML 코드 
 //   - 변형된 코드 ( 개발자도구 / Sources 에서 확인 가능 )
