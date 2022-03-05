@@ -3,20 +3,19 @@
 // => 즉, 파일명은 로직과 HTML코드를 예상할 수 있는 이름으로 지어야한다. 
 
 import ExpenseDate from './ExpenseDate';
+import Card from '../UI/Card';
 import './ExpenseItem.css';
 
-function ExpenseItem(props){ // (1) props 가져올거야
-
-    
+const ExpenseItem = (props) => { // (1) props 가져올거야
 
     return (
-    <div className="expense-item">
+    <Card className="expense-item">
         <ExpenseDate date={props.date}/>
         <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
         </div>
-    </div>
+    </Card>
 );
 }
 

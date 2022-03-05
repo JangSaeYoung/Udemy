@@ -1,12 +1,8 @@
-import ExpenseItem from './comonents/Expenseltem.js';
+import React from 'react';
+import Expenses from './comonents/Expenses/Expenses';
 
-// 과제
-// 네 개의 비용 아이템 => 배열을 계속 둘 거다. 하지만
-// 4개의 비용 아이템을 만드는 컴포넌트
-// 새로운 컴포넌트는 App.js에 만들어져야 함.
-// expenses 의 props를 새 컴포넌트에 보내야 함. 
-function App() {
 
+const App = () => {
   const expenses = [
     {
       id: 'e1',
@@ -32,25 +28,21 @@ function App() {
     },
   ];
 
+
+// return React.createElement(
+//   'div', {},
+//   React.createElement('h1', {}, "Let's get started"),
+//   React.createElement(Expenses, {items: expenses})
+// );
+// }
+
+
+
   return (
     <div>
       <p>Let's get started!</p>
-      <ExpenseItem 
-      title={expenses[0].title} 
-      amount={expenses[0].amount} 
-      date={expenses[0].date}/>
-      <ExpenseItem 
-      title={expenses[1].title} 
-      amount={expenses[1].amount} 
-      date={expenses[1].date}/>
-      <ExpenseItem 
-      title={expenses[2].title} 
-      amount={expenses[2].amount} 
-      date={expenses[2].date}/>
-      <ExpenseItem 
-      title={expenses[3].title} 
-      amount={expenses[3].amount} 
-      date={expenses[3].date}/>
+      <Expenses items= {expenses} />
+      
     </div>
   );
 }
