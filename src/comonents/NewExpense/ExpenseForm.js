@@ -6,7 +6,7 @@ import './ExpenseForm.css';
 
 // 새로운 입력값을 추가할 수 있는 컴포넌트
 
-const ExpenseForm = () => { 
+const ExpenseForm = (props) => { 
 
     const [ enteredTitle , setEnteredTitle ] = useState(''); 
     const [ enteredAmount , setEnteredAmount ] = useState('');
@@ -41,9 +41,7 @@ const ExpenseForm = () => {
             date: new Date(enteredDate),
         };
 
-
-        console.log(expenseData);
-
+        props.onSaveExpenseData(expenseData);
         setEnteredTitle('');  
         setEnteredAmount('');
         setEnteredDate('');
